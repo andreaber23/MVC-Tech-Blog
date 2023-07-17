@@ -40,7 +40,6 @@ router.post("/", async (req, res) => {
   });
 
   //update
-
   route.put("/:id", async (req,res) => {
     try {
         const updateComment = await Comment.update(req.body, {
@@ -50,7 +49,7 @@ router.post("/", async (req, res) => {
         })
         
         if (!updateComment[0]){
-            res.status(400).json({ message: "No comment found with that id!" });
+            res.status(400).json({ message: "No comment found with this id!" });
       return;
         }
         console.log("comment was updated"),
@@ -60,3 +59,24 @@ router.post("/", async (req, res) => {
         res.status(500).json(err);
       }
   })
+
+  // delete
+
+  router.delete('/:id', async(req, res) => {
+    try {
+      const deleteComment = await Comment.destroy({
+        where: {id: req.params.id}
+      });
+      if (!deleteComment){
+        res.status(404).json({ message: 'No comment found with this id!' });
+        return;
+      }
+      res.status(200).json(deleteComment);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+  
+  module.exports = router;
+  
