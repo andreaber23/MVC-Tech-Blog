@@ -8,7 +8,6 @@ class User extends Model {
   }
 }
 
-// User Table Model
 User.init(
   {
     id: {
@@ -59,5 +58,4 @@ User.init(
   }
 );
 
-// Export
 module.exports = User;
