@@ -1,33 +1,30 @@
 <body>
   <div class="flex-column justify-space-around">
     <header>
-      <!-- Include header content -->
     </header>
 
     <main class="container container-fluid mt-5">
       <div class="card">
         <div class="card-body">
           <h2 class="card-title">{{title}}</h2>
-          <p class="card-text"><small>Posted by {{user.username}} on {{format_date date_created}}</small></p>
+          <p class="card-text"><small>Posted by {{user.name}} on {{format_date date_created}}</small></p>
           <hr>
-          <p class="card-text">{{description}}</p>
+          <p class="card-text">{{content}}</p>
         </div>
       </div>
 
-]      <div class="row mb-4">
+      <div class="row mb-4">
         <div class="col-md-12">
           <h3>Comments</h3>
-          <!-- Loop through comments to display each one -->
           {{#each comments as |comment|}}
           <div class="card mb-3">
             <div class="card-body">
               <p class="card-text">{{comment.text}}</p>
-              <p class="card-text"><small>Comment by {{comment.user.username}} on {{format_date comment.date_created}}</small></p>
+              <p class="card-text"><small>Comment by {{comment.user.name}} on {{format_date comment.date_created}}</small></p>
             </div>
           </div>
           {{/each}}
 
-          <!-- Comment Form -->
           {{#if logged_in}}
           <form class="form comment-form" id="comment-form" data-id="{{id}}">
             <div class="form-group">
@@ -50,6 +47,7 @@
       
     </footer>
   </div>
+
   <script src="/js/post.js"></script>
 </body>
 

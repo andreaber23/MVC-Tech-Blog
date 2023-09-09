@@ -3,14 +3,13 @@ const commentFormHandler = async (event) => {
     event.preventDefault();
   
     const postId = document.querySelector('#comment-form').getAttribute('data-id');
-    const commentDescription = document.querySelector('#comment-text').value.trim();
-    console.log('Comment Data:', { text: commentDescription, postId });
+    const commentText = document.querySelector('#comment-text').value.trim();
+    console.log('Comment Data:', { text: commentText, postId });
   
-    if (commentDescription && postId) {
-      // Send a POST request to the create comment API endpoint
+    if (commentText && postId) {
       const response = await fetch(`/api/posts/${postId}/comments`, {
         method: 'POST',
-        body: JSON.stringify({ text: commentDescription }),
+        body: JSON.stringify({ text: commentText }),
         headers: {
           'Content-Type': 'application/json',
         },
