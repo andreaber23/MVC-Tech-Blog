@@ -52,6 +52,33 @@ router.get("/blogPost/:id", withAuth, async (req,res) => {
       };
 });
 
+router.get('/edit-blogpost/:id', withAuth, async (req, res) => {
+    try {
+      const blogPostData = await BlogPost.findByPk(req.params.id, {
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+        ],
+      });
+  
+      if (!blogPostDataostData) {
+        res.status(404).json({ message: 'Post not found' });
+        return;
+      }
+  
+      const blogPost = blogPostData.get({ plain: true });
+  
+      res.render('edit-blogpost', {
+        ...blogPost,
+        logged_in: true,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 router.get('/login', (req, res) => {
    
     if (req.session.logged_in) {
