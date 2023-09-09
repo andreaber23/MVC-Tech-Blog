@@ -25,7 +25,7 @@ router.get("/", async (req,res) => {
       }
 });
 
-router.get("/blogPost/:id", withAuth, async (req,res) => {
+router.get("/post/:id", withAuth, async (req,res) => {
     try {
         const blogPostData = await BlogPost.findByPk(req.params.id, {
             include: [
@@ -52,7 +52,7 @@ router.get("/blogPost/:id", withAuth, async (req,res) => {
       };
 });
 
-router.get('/edit-blogpost/:id', withAuth, async (req, res) => {
+router.get('/edit-post/:id', withAuth, async (req, res) => {
     try {
       const blogPostData = await BlogPost.findByPk(req.params.id, {
         include: [
@@ -70,7 +70,7 @@ router.get('/edit-blogpost/:id', withAuth, async (req, res) => {
   
       const blogPost = blogPostData.get({ plain: true });
   
-      res.render('edit-blogpost', {
+      res.render('edit-post', {
         ...blogPost,
         logged_in: true,
       });

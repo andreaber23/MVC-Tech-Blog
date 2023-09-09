@@ -1,0 +1,75 @@
+<div class='row'>
+  <div class='col-auto'>
+    <h2>Welcome, {{username}}!</h2>
+  </div>
+</div>
+
+<div class='row mt-4'>
+  <div class='col-md-6'>
+    <div class='card'>
+      <div class='card-header'>
+        <h3>Create a New Blog Post:</h3>
+      </div>
+      <div class='card-body'>
+        <form class='form new-blog-post-form'>
+          <div class='form-group'>
+            <label for='post-title'>Post Title:</label>
+            <input
+              class='form-input'
+              type='text'
+              id='post-title'
+              name='post-title'
+            />
+          </div>
+          <div class='form-group'>
+            <label for='post-description'>Post Content:</label>
+            <textarea
+              class='form-input'
+              id='post-description'
+              name='post-description'
+            ></textarea>
+          </div>
+          <div class='form-group'>
+            <button type='submit' class='btn btn-primary'>Create Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {{#if posts.length}}
+    <div class='col-md-6'>
+      <div class='card'>
+        <div class='card-header'>
+          <h3>Your Blog Posts:</h3>
+        </div>
+        <div class='card-body blog-post-list'>
+          {{#each posts as |post|}}
+            <div class='row mb-2'>
+              <div class='col-md-8'>
+                <h4><a href='/post/{{post.id}}'>{{post.title}}</a></h4>
+                <p>Created on: {{format_date post.date_created}}</p>
+              </div>
+              <div class='col-md-4'>
+                <a
+                  href='/edit-post/{{post.id}}'
+                  class='btn btn-sm btn-primary'
+                >Edit</a>
+                <button
+                  class='btn btn-sm btn-danger delete-button'
+                  data-id='{{post.id}}'
+                >DELETE</button>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <div class='col-md-6'>
+      <p>You have not created any blog posts yet.</p>
+    </div>
+  {{/if}}
+</div>
+
+<script src='/js/dashboard.js'></script>
