@@ -24,14 +24,7 @@ User has to create an account if they do not have one already. Password has to c
 
 ## Screenshots
 
-<img width="1062" alt="Screenshot 2023-09-09 at 9 07 40 PM" src="https://github.com/andreaber23/MVC-Tech-Blog/assets/128647787/0a23438e-5538-4e58-ae76-135a7d19349e">
 
-<img width="1056" alt="Screenshot 2023-09-09 at 9 07 47 PM" src="https://github.com/andreaber23/MVC-Tech-Blog/assets/128647787/3820e6c5-edc2-43c6-9c85-603e129092f1">
-
-<img width="1420" alt="Screenshot 2023-09-09 at 9 08 44 PM" src="https://github.com/andreaber23/MVC-Tech-Blog/assets/128647787/cf80d5b4-14f5-4b9c-ab3f-9661743dec8e">
-
-
-## License
 N/A
 
 ## Contributing
