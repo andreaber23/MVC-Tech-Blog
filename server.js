@@ -26,7 +26,7 @@ const sess = {
 
 app.use(session(sess));
 
-app.engine('handlebars', exphbs());
+app.engine('handlebars', hbs.engine);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'handlebars');
