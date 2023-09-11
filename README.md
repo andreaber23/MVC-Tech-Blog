@@ -20,9 +20,15 @@ User has to create an account if they do not have one already. Password has to c
 
 ## Deployed Application Link
 
-
+https://still-lowlands-95397-c4be983c3821.herokuapp.com/
 
 ## Screenshots
+
+<img width="1434" alt="Screenshot 2023-09-11 at 1 39 09 PM" src="https://github.com/andreaber23/MVC-Tech-Blog/assets/128647787/18173288-8fc0-4565-946c-d338d79e1d42">
+
+<img width="1433" alt="Screenshot 2023-09-11 at 1 39 27 PM" src="https://github.com/andreaber23/MVC-Tech-Blog/assets/128647787/095ca8b9-e7ff-4016-87dc-2b14ea1be5e3">
+
+<img width="1432" alt="Screenshot 2023-09-11 at 1 39 47 PM" src="https://github.com/andreaber23/MVC-Tech-Blog/assets/128647787/c8e8e308-6190-4dd3-8c0b-2290bcc1cfbd">
 
 
 N/A
