@@ -22,6 +22,8 @@ User has to create an account if they do not have one already. Password has to c
 
 https://still-lowlands-95397-c4be983c3821.herokuapp.com/
 
+![GIF](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWF3NTFzdHdtb2VubmpibHM4anFxdXR5ZnBvdDd6am1yamo3ODdwNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WHNZKPe9relbw23rMg/giphy.gif)
+
 ## Screenshots
 
 <img width="1434" alt="Screenshot 2023-09-11 at 1 39 09 PM" src="https://github.com/andreaber23/MVC-Tech-Blog/assets/128647787/18173288-8fc0-4565-946c-d338d79e1d42">
